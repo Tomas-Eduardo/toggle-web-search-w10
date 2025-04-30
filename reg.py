@@ -22,7 +22,7 @@ def apply_changes():
             # If it doesn't exist, create it
             winreg.SetValueEx(key, "CortanaConsent", 0, winreg.REG_DWORD, 0)
         
-        messagebox.showinfo("Info", "The web search is enabled.")
+        messagebox.showinfo("Info", "The web search is unabled.")
         winreg.CloseKey(key)
     
     except FileNotFoundError:
@@ -52,7 +52,7 @@ def delete_registry_key():
             # Dont send any message if it does not exist
             pass
         
-        messagebox.showinfo("Info", "The web search is unabled.")
+        messagebox.showinfo("Info", "The web search is enabled.")
         winreg.CloseKey(key)
 
     except FileNotFoundError:
