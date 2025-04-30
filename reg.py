@@ -22,7 +22,7 @@ def apply_changes():
             # If it doesn't exist, create it
             winreg.SetValueEx(key, "CortanaConsent", 0, winreg.REG_DWORD, 0)
         
-        messagebox.showinfo("Info", "The web search is unabled.")
+        messagebox.showinfo("Info", "The web search is disable.")
         winreg.CloseKey(key)
     
     except FileNotFoundError:
@@ -72,7 +72,7 @@ root.resizable(False, False)
 root.configure(bg="#f0f0f0")
 
 label = tk.Label(root, text="Disable web search in Windows 10", bg="#f0f0f0", font=("Arial", 12))
-label.pack(pady=10)
+label.pack(pady=10)# Replace with your icon file path
 
 apply_button = tk.Button(root, text="Disable web search", command=apply_changes)
 apply_button.pack(pady=5)
